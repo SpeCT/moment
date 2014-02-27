@@ -4,13 +4,13 @@
 // author: Menelion Elensúle: https://github.com/Oire
 
 (function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['moment'], factory); // AMD
-    } else if (typeof exports === 'object') {
-        module.exports = factory(require('../moment')); // Node
-    } else {
-        factory(window.moment); // Browser global
-    }
+    // if (typeof define === 'function' && define.amd) {
+    //     define(['moment'], factory); // AMD
+    // } else if (typeof exports === 'object') {
+    //     module.exports = factory(require('../moment')); // Node
+    // } else {
+         factory(window.moment); // Browser global
+    // }
 }(function (moment) {
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {

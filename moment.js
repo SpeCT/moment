@@ -4,7 +4,7 @@
 //! license : MIT
 //! momentjs.com
 
-(function (undefined) {
+;(function (undefined) {
 
     /************************************
         Constants
@@ -2410,19 +2410,19 @@
     }
 
     // CommonJS module is defined
-    if (hasModule) {
-        module.exports = moment;
-        makeGlobal(true);
-    } else if (typeof define === "function" && define.amd) {
-        define("moment", function (require, exports, module) {
-            if (module.config && module.config() && module.config().noGlobal !== true) {
-                // If user provided noGlobal, he is aware of global
-                makeGlobal(module.config().noGlobal === undefined);
-            }
+    // if (hasModule) {
+    //     module.exports = moment;
+    //     makeGlobal(true);
+    // } else if (typeof define === "function" && define.amd) {
+    //     define("moment", function (require, exports, module) {
+    //         if (module.config && module.config() && module.config().noGlobal !== true) {
+    //             // If user provided noGlobal, he is aware of global
+    //             makeGlobal(module.config().noGlobal === undefined);
+    //         }
 
-            return moment;
-        });
-    } else {
+    //         return moment;
+    //     });
+    // } else {
         makeGlobal();
-    }
+    // }
 }).call(this);
